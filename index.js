@@ -1,5 +1,13 @@
+function CekNull(p1) {
+  if (p1 == "") {
+    return 0;
+  } else {
+    return 1;
+  }
+}
 class backtracking {
   static N = 6;
+
   cetakSolusi(sol) {
     document.write('<p class= "solusi">');
     for (let i = 0; i < backtracking.N; i++) {
@@ -14,15 +22,17 @@ class backtracking {
     }
     document.write("</p>");
   }
+
   aman(maze, x, y) {
     return x >= 0 && x < backtracking.N && y >= 0 && y < backtracking.N && maze[x][y] == 1;
   }
+
   solusi(maze) {
     var sol = Array(backtracking.N)
       .fill(0)
       .map(() => new Array(backtracking.N).fill(0));
     if (this.solusiLabirin(maze, 0, 0, sol) == false) {
-      document.write("TIDAK ADA SOLUSI");
+      document.write("<h4>TIDAK ADA SOLUSI!!!</h4>");
       return false;
     }
     this.cetakSolusi(sol);
@@ -55,7 +65,9 @@ class backtracking {
     }
     return false;
   }
+
   static default(args) {
+    document.write('<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">');
     document.write('<link rel="stylesheet" href="index.css">');
     var labirin = new backtracking();
     var maze = [
@@ -68,7 +80,6 @@ class backtracking {
     ];
     backtracking.N = maze.length;
     document.write('<div class="container-fluid" id = "keluaran">');
-    document.write('<a href="index.html"><h6>Back</h6></a>');
     document.write("<h1>Labirin Awal</h1>");
     document.write('<p class= "awal">');
     for (let i = 0; i < backtracking.N; i++) {
@@ -86,6 +97,7 @@ class backtracking {
     document.write("<br>");
     document.write("<h1>Labirin Solusi</h1>");
     labirin.solusi(maze);
+    document.write('<br><a href="index.html"><button class="btn btn-secondary">Back</button></a>');
     document.write("</div>");
   }
 
@@ -132,6 +144,41 @@ class backtracking {
     var v65 = document.getElementById("6,5").value;
     var v66 = document.getElementById("6,6").value;
 
+    v12 = CekNull(v12);
+    v13 = CekNull(v13);
+    v14 = CekNull(v14);
+    v15 = CekNull(v15);
+    v16 = CekNull(v16);
+    v21 = CekNull(v21);
+    v22 = CekNull(v22);
+    v23 = CekNull(v23);
+    v24 = CekNull(v24);
+    v25 = CekNull(v25);
+    v26 = CekNull(v26);
+    v31 = CekNull(v31);
+    v32 = CekNull(v32);
+    v33 = CekNull(v33);
+    v34 = CekNull(v34);
+    v35 = CekNull(v35);
+    v36 = CekNull(v36);
+    v41 = CekNull(v41);
+    v42 = CekNull(v42);
+    v43 = CekNull(v43);
+    v44 = CekNull(v44);
+    v45 = CekNull(v45);
+    v46 = CekNull(v46);
+    v51 = CekNull(v51);
+    v52 = CekNull(v52);
+    v53 = CekNull(v53);
+    v54 = CekNull(v54);
+    v55 = CekNull(v55);
+    v56 = CekNull(v56);
+    v61 = CekNull(v61);
+    v62 = CekNull(v62);
+    v63 = CekNull(v63);
+    v64 = CekNull(v64);
+    v65 = CekNull(v65);
+
     var labirin = new backtracking();
     var maze = [
       [v11, v12, v13, v14, v15, v16],
@@ -142,9 +189,10 @@ class backtracking {
       [v61, v62, v63, v64, v65, v66],
     ];
     backtracking.N = maze.length;
+
+    document.write('<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">');
     document.write('<link rel="stylesheet" href="index.css">');
     document.write('<div class="container-fluid" id = "keluaran">');
-    document.write('<a href="index.html"><h6>Back</h6></a>');
     document.write("<h1>Labirin Awal</h1>");
     document.write('<p class= "awal">');
     for (let i = 0; i < backtracking.N; i++) {
@@ -162,6 +210,7 @@ class backtracking {
     document.write("<br>");
     document.write("<h1>Labirin Solusi</h1>");
     labirin.solusi(maze);
+    document.write('<br><a href="index.html"><button class="btn btn-secondary">Back</button></a>');
     document.write("</div>");
   }
 }

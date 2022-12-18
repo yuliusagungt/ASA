@@ -6,21 +6,31 @@
   color: green;
 }
 
-* {
-  background-color: rgb(158, 255, 177);
+*,
+html,
+body {
+  background-color: rgb(253, 215, 132);
+  font-family: "Courier New", Courier, monospace;
 }
 
 .container-fluid {
   text-align: center;
   padding-top: 20px;
 }
-
+h1,
+h3,
+h4,
+h5 {
+  font-weight: 900;
+}
 p {
   font-size: 30px;
 }
-
+h4 {
+  color: red;
+}
 input {
-  background-color: rgb(206, 255, 216);
+  background-color: rgb(255, 230, 177);
   margin-right: 10px;
   margin-bottom: 10px;
   text-align: center;
